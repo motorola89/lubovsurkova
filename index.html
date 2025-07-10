@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цифровая психология — Любовь Суркова</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="pictures/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init('8XrCtSLMoz_yYrofS');
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="#home" class="logo"><span class="logo-text">LS</span></a>
+      <nav class="nav">
+        <a href="#home">Главная</a>
+        <a href="#services">Продукты</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="nav-toggle" id="navToggle"><span></span></div>
+    </div>
+  </header>
+  <main>
+    <section id="home" class="section home home-bg">
+      <div class="container home-content">
+        <div class="home-image">
+          <img src="pictures/lubov.png" alt="Любовь Суркова" class="main-photo">
+        </div>
+        <div class="home-text">
+          <div class="home-title">ЛЮБОВЬ СУРКОВА</div>
+          <div class="home-subtitle">
+            <span>Цифровая психология - наука о цифрах</span>
+          </div>
+          <div class="home-features">
+            <div class="feature">
+              <span class="feature-icon"><img src="pictures/Icon-1.png" alt="icon-1"></span>
+              <span class="feature-text">
+                <span class="feature-title">Проверенный специалист со стажем</span>
+                <span class="feature-desc">цифровой психолог, медицинский психолог, трансформатор физ.тела, массаж</span>
+              </span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon"><img src="pictures/Icon-2.png" alt="icon-2"></span>
+              <span class="feature-text">
+                <span class="feature-title">Составлю личный календарь</span>
+                <span class="feature-desc">На год со всеми объяснениями</span>
+              </span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon"><img src="pictures/Icon-3.png" alt="icon-3"></span>
+              <span class="feature-text">
+                <span class="feature-title">Помогу найти ключи к подсознанию</span>
+                <span class="feature-desc">и найду ответы на все ваши вопросы</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Продукты и услуги</h2>
+        <div class="services-list">
+          <div class="service-card">
+            <h3>Личный календарь</h3>
+            <p>Анализ значимых дат вашей жизни. Узнайте, какие периоды наиболее благоприятны для важных решений и перемен.</p>
+          </div>
+          <div class="service-card">
+            <h3>Удаление "программ"</h3>
+            <p>Работа с негативными установками через числа. Освободитесь от ограничивающих сценариев и начните новую главу.</p>
+          </div>
+          <div class="service-card">
+            <h3>Разбор совместимости</h3>
+            <p>Анализ отношений по числам в датах рождения. Откройте секреты гармонии и понимания с близкими.</p>
+          </div>
+          <div class="service-card">
+            <h3>Полный разбор личности</h3>
+            <p>Ваш нумерологический профиль: сильные стороны, таланты, жизненные задачи и пути развития.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contacts" class="section contacts">
+      <div class="container">
+        <h2>Контакты</h2>
+        <div class="contacts-content">
+          <div class="contacts-info">
+            <p><b>Телефон:</b> <a href="tel:+79053460776" class="phone-link">+7 (905) 346-07-76</a></p>
+            <div class="contacts-socials">
+              <a href="https://t.me/massage_celitel" class="social telegram" target="_blank">Telegram-канал</a>
+            </div>
+            <button class="btn btn-main" id="openContactForm2">Написать мне</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="contact-popup" id="contactPopup">
+      <div class="contact-popup-content">
+        <button class="close-popup" id="closeContactPopup">&times;</button>
+        <h2>Связаться с Любовью Сурковой</h2>
+        <form id="contact-form">
+          <input type="text" name="user_name" placeholder="Ваше имя" required>
+          <input type="email" name="user_email" placeholder="Email" required>
+          <textarea name="message" placeholder="Сообщение"></textarea>
+          <button type="submit" class="btn btn-main">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Любовь Суркова. Цифровая психология. Все права защищены.</p>
+      <a href="#home" class="to-top" id="toTop">Наверх ↑</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 
