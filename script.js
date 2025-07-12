@@ -37,18 +37,43 @@ if (contactPopup) {
   });
 }
 
+// Проверка инициализации EmailJS
+console.log('EmailJS статус:', typeof emailjs !== 'undefined' ? 'Загружен' : 'Не загружен');
+
 // EmailJS отправка формы
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Получаем данные формы
+    const formData = new FormData(this);
+    const name = formData.get('user_name');
+    const email = formData.get('user_email');
+    const message = formData.get('message');
+    
+    console.log('Отправка формы:', { name, email, message });
+    
+    // Показываем индикатор загрузки
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Отправка...';
+    submitBtn.disabled = true;
+    
     emailjs.sendForm('service_fr3gb6f', 'template_d3q1ak8', this)
-      .then(() => {
+      .then((response) => {
+        console.log('Успешная отправка:', response);
         alert('Сообщение отправлено!');
         hideContactPopup();
         contactForm.reset();
       }, (err) => {
-        alert('Ошибка: ' + err);
+        console.error('Ошибка отправки:', err);
+        alert('Ошибка отправки: ' + err.text || err.message || 'Неизвестная ошибка');
+      })
+      .finally(() => {
+        // Восстанавливаем кнопку
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
       });
   });
 }

@@ -425,8 +425,24 @@ body {
   font-size: 1rem;
   font-family: 'Montserrat', Arial, sans-serif;
   background: #fff;
-  color: var(--main-bg);
+  color: var(--text-dark);
   resize: none;
+}
+
+#contact-form input::placeholder, #contact-form textarea::placeholder {
+  color: var(--text);
+  opacity: 0.7;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+  outline: none;
+  border-color: var(--text-dark);
+  box-shadow: 0 0 0 2px rgba(109, 76, 139, 0.1);
+}
+
+#contact-form input::selection, #contact-form textarea::selection {
+  background-color: var(--lavender);
+  color: var(--text-dark);
 }
 #contact-form textarea {
   min-height: 80px;
@@ -537,7 +553,7 @@ body {
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 1px auto;
+  margin: 0 auto 40px auto;
   background: none !important;
   box-shadow: none !important;
   border: none !important;
